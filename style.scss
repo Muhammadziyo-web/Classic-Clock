@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Poppins:wght@100;300;400&family=Raleway:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wrapper{
+    width: 500px;
+    height: 500px;
+    background: rgba(164, 103, 103, 0.211);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 5px solid rgba(0, 0, 0, 0.542);
+}
+
+
+
+
+
+
+.numbers{
+    width: 470px;
+    height: 470px;
+    --rotation:0;
+    font-family: 'Orbitron', sans-serif;
+    transform: rotate(var(--rotation));
+    position: absolute;
+    text-align: center;
+    font-size: 30px;
+}
+.num1{
+    --rotation:30deg;
+    p{
+        transform: rotate(-30deg);
+    }
+
+}
+.num2{
+    --rotation:60deg;
+    p{
+        transform: rotate(-60deg);
+    }
+}
+.num3{
+    --rotation:90deg;
+    p{
+        transform: rotate(-90deg);
+    }
+}
+.num4{
+    --rotation:120deg;
+    p{
+        transform: rotate(-120deg);
+    }
+}
+.num5{
+    --rotation:150deg;
+    p{
+        transform: rotate(-150deg);
+    }
+}
+.num6{
+    --rotation:180deg;
+    p{
+        transform: rotate(-180deg);
+    }
+}
+.num7{
+    --rotation:210deg;
+    p{
+        transform: rotate(-210deg);
+    }
+}
+.num8{
+    --rotation:240deg;
+    p{
+        transform: rotate(-240deg);
+    }
+}
+.num9{
+    --rotation:270deg;
+    p{
+        transform: rotate(-270deg);
+    }
+}
+.num10{
+    --rotation:300deg;
+    p{
+        transform: rotate(-300deg);
+    }
+}
+.num11{
+    --rotation:330deg;
+    p{
+        transform: rotate(-330deg);
+    }
+}
+.num12{
+    --rotation:0deg;
+    p{
+        transform: rotate(-0deg);
+    }
+}
+.hand{
+    width: 20px;
+    height: 150px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    bottom: 50%;
+    // left: 50%;
+    transform-origin: bottom;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    z-index: 7;
+    // transform: rotate(var(--rotation));
+    transform: rotate(calc(var(--rotation)*1deg));
+
+
+}
+.min{
+    height: 180px;
+    width: 13px;
+    z-index: 8;
+    transform: rotate(var(--rotation));
+}
+.sec{
+    width: 4px;
+    height: 210px;
+    background: rgba(255, 87, 87, 0.947);
+    z-index: 9;
+    transform: rotate(calc(var(--rotation)*1deg));
+}
+.wrapper::after{
+    content: " ";
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    transform: rotate(var(--rotation));
+}
+.mill{
+    width: 60px;
+    height: 60px;
+    background: rgba(78, 74, 74, 0.307);
+    opacity: 1;
+    border-radius: 50%;
+    right: 23%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+        position: absolute;
+        height: 26px;
+        width: 2px;
+        background-color: #000;
+        bottom: 50%;
+        transform-origin: bottom; 
+        transform: rotate(calc(var(--rotation)*1deg));
+    
+    }
+    &::after{
+        content: " ";
+        width: 2px;
+        height: 6px;
+        background: rgba(0, 0, 0, 0.505);
+        border-radius: 25%;
+        position: absolute;
+        top: 0;
+    }
+    &::before{
+        content: " ";
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        background: #000;
+        border-radius: 50%;
+
+    }
+}
+@media only screen and (max-width:550px) {
+    .wrapper{
+        width: 90vw;
+        height: 90vw;
+    }
+    .numbers{
+        width: 83vw;
+        height: 83vw;
+    }
+    .hand{
+        width: 15px;
+        height: 20vw;
+    }
+    .min{
+        width: 10px;
+        height: 29vw;
+    }
+    .sec{
+        width: 5px;
+        height: 33vw;
+    }
+    .mill{
+        width: 30px;
+        height: 30px;
+        span{
+            height: 12px;
+            width: 1px;
+        }
+        &::after{
+            height: 2px;
+        }
+        &::before{
+            width: 3px;
+            height: 3px;
+        }
+    }
+    
+}
