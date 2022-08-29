@@ -150,7 +150,7 @@ body {
   height: 180px;
   width: 13px;
   z-index: 8;
-  transform: rotate(var(--rotation));
+  transform: rotate(calc(var(--rotation)*1deg));
 }
 
 .sec {
